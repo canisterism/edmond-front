@@ -2,7 +2,7 @@ const pkg = require('./package')
 
 module.exports = {
   mode: 'universal',
-  srcDir: "app",
+  srcDir: 'app',
   /*
   ** Headers of the page
   */
@@ -24,7 +24,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [],
+  css: [{ src: 'bulma/bulma.sass', lang: 'sass' }],
 
   /*
   ** Plugins to load before mounting the App
@@ -45,7 +45,7 @@ module.exports = {
   ** Axios module configuration
   */
   axios: {
-    // See https://github.com/nuxt-community/axios-module#options
+    baseURL: 'https://karite-api.herokuapp.com'
   },
 
   /*
@@ -73,8 +73,5 @@ module.exports = {
         })
       }
     }
-  },
-  axios: {
-    baseURL: "https://karite-api.herokuapp.com"
   }
 }
