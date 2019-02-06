@@ -1,53 +1,53 @@
 <template>
-  <section class="container">
-    <div class="columns">
-      <!-- サイドバー -->
-      <div class="submenu column is-3 has-background-warning" style="background-color:light">
-        <aside>hogehoge</aside>
-        <aside>hogehoge</aside>
-        <aside>hogehoge</aside>
-        <aside>hogehoge</aside>
-        <aside>hogehoge</aside>
-        <aside>hogehoge</aside>
-        <aside>hogehoge</aside>
-        <aside>hogehoge</aside>
-        <aside>hogehoge</aside>
-        <aside>hogehoge</aside>
-        <aside>hogehoge</aside>
-        <aside>hogehoge</aside>
-        <aside>hogehoge</aside>
-        <aside>hogehoge</aside>
-        <aside>hogehoge</aside>
-        <aside>hogehoge</aside>
-        <aside>hogehoge</aside>
-        <aside>hogehoge</aside>
-        <aside>hogehoge</aside>
-        <aside>hogehoge</aside>
-        <aside>hogehoge</aside>
+  <section>
+    <!-- ヘッダー -->
+    <nav class="navbar has-background-base has-text-white" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item has-background-white">
+          <span class="brand-logo">Edmond</span>
+        </a>
       </div>
-      <!-- サイドバー おわり -->
-      <div class="column has-background-link">
-        <!-- ヘッダー -->
-        <nav class="navbar has-background-info" aria-label="main navigation">
-          <div class="navbar-brand">
-            <span class="navbar-item brand-logo">Edmond</span>
-          </div>
+      <div class="navbar-item search-area">
+        <div class="control width-100p">
+          <input class="input" type="text">
+        </div>
+      </div>
 
-          <div class="navbar-menu">
-            <div class="navbar-end">
-              <span class="navbar-item">
-                <span class="icon">
-                  <i class="fas fa-user"></i>
-                </span>
-              </span>
-            </div>
-          </div>
-        </nav>
-        <!-- ヘッダー おわり -->
-        <!-- メインコンテンツ -->
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown">
+          <a class="navbar-link dropdown-text">hoge@giftee.co</a>
+        </div>
+        <div class="navbar-dropdown">
+          <a href="/" class="navbar-item">自分のページ</a>
+          <a href="/" class="navbar-item">設定</a>
+        </div>
       </div>
+    </nav>
+    <!-- メインコンテンツ おわり -->
+    <div class="column">
+      <aside>hogehoge</aside>
+      <aside>hogehoge</aside>
+      <aside>hogehoge</aside>
+      <aside>hogehoge</aside>
+      <aside>hogehoge</aside>
+      <aside>hogehoge</aside>
+      <aside>hogehoge</aside>
+      <aside>hogehoge</aside>
+      <aside>hogehoge</aside>
+      <aside>hogehoge</aside>
+      <aside>hogehoge</aside>
+      <aside>hogehoge</aside>
+      <aside>hogehoge</aside>
+      <aside>hogehoge</aside>
+      <aside>hogehoge</aside>
+      <aside>hogehoge</aside>
+      <aside>hogehoge</aside>
+      <aside>hogehoge</aside>
+      <aside>hogehoge</aside>
+      <aside>hogehoge</aside>
+      <aside>hogehoge</aside>
+      <!-- メインコンテンツ おわり-->
     </div>
-    <!-- メインコンテンツ おわり-->
   </section>
 </template>
 
@@ -57,8 +57,24 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang="scss">
 .brand-logo {
   font-size: 2rem;
+  font-family: 'Futura';
+  font-weight: bold;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.search-area {
+  width: 65%;
+  margin-left: 2rem;
+}
+
+.dropdown-text {
+  color: white;
+  &:hover {
+    background: #355293 !important;
+  }
 }
 </style>
