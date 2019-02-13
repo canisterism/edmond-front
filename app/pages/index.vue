@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class>
     <!-- ヘッダー -->
     <nav class="navbar has-background-base has-text-white" aria-label="main navigation">
       <div class="navbar-brand">
@@ -24,36 +24,26 @@
       </div>
     </nav>
     <!-- メインコンテンツ おわり -->
-    <div class="column">
-      <aside>hogehoge</aside>
-      <aside>hogehoge</aside>
-      <aside>hogehoge</aside>
-      <aside>hogehoge</aside>
-      <aside>hogehoge</aside>
-      <aside>hogehoge</aside>
-      <aside>hogehoge</aside>
-      <aside>hogehoge</aside>
-      <aside>hogehoge</aside>
-      <aside>hogehoge</aside>
-      <aside>hogehoge</aside>
-      <aside>hogehoge</aside>
-      <aside>hogehoge</aside>
-      <aside>hogehoge</aside>
-      <aside>hogehoge</aside>
-      <aside>hogehoge</aside>
-      <aside>hogehoge</aside>
-      <aside>hogehoge</aside>
-      <aside>hogehoge</aside>
-      <aside>hogehoge</aside>
-      <aside>hogehoge</aside>
+    <div class="main-container columns is-multiline">
+      <book-card></book-card>
+      <book-card></book-card>
+      <book-card></book-card>
+      <book-card></book-card>
+      <book-card></book-card>
+      <book-card></book-card>
+      <book-card></book-card>
       <!-- メインコンテンツ おわり-->
     </div>
   </section>
 </template>
 
 <script>
+import BookCard from '~/components/BookCard.vue'
+
 export default {
-  components: {}
+  components: {
+    BookCard
+  }
 }
 </script>
 
@@ -76,5 +66,9 @@ export default {
   &:hover {
     background: #355293 !important;
   }
+}
+
+.main-container {
+  margin: 1rem;
 }
 </style>
