@@ -1,5 +1,5 @@
 <template>
-  <div class="column is-one-fifth-desktop is-5-mobile">
+  <a class="card-box column is-one-fifth-desktop is-5-mobile is-one-quarter-tablet">
     <div class="card-box-background">
       <figure class="image">
         <img src="https://cover.openbd.jp/9784780802047.jpg" alt>
@@ -8,10 +8,14 @@
         <div class="content">
           <div class="is-size-6">おにぎりレシピ101 everyday onigiri</div>
           <div class="author is-size-7">山田玲子</div>
+          <div class="published_by is-size-7">技術評論社</div>
+          <!-- 出せないので後で消す -->
+          <div class="button">貸出可</div>
+          <!-- 出せないので後で消す -->
         </div>
       </div>
     </div>
-  </div>
+  </a>
 </template>
 
 <script>
@@ -19,8 +23,11 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
+.card-box {
+  color: white;
+}
 .image {
-  margin: 1rem;
+  margin: 0.6rem;
 }
 .card-box-background {
   border-radius: 6px;
@@ -36,5 +43,11 @@ export default {}
 
 .author {
   margin-top: 0.5rem;
+}
+.button {
+  margin-top: 0.8rem;
+  font-size: 0.8rem;
+  background-color: yellow;
+  color: #273c6c;
 }
 </style>
