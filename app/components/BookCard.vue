@@ -1,5 +1,8 @@
 <template>
-  <a class="card-box column is-one-fifth-desktop is-5-mobile is-one-quarter-tablet">
+  <nuxt-link
+    to="book/1"
+    class="card-box column is-one-fifth-desktop is-5-mobile is-one-quarter-tablet"
+  >
     <div class="card-box-background">
       <figure class="image">
         <img src="https://cover.openbd.jp/9784780802047.jpg" alt>
@@ -15,7 +18,7 @@
         </div>
       </div>
     </div>
-  </a>
+  </nuxt-link>
 </template>
 
 <script>
