@@ -15,7 +15,6 @@
         <div class="borrow button is-primary">借りる</div>
         <div class="borrowing-info">
           <h4>借りている人</h4>
-          <div class="border-line"></div>
           <ul class="borrowing-users">
             <li class="borrowing-user">
               <nuxt-link to="/user/1">
