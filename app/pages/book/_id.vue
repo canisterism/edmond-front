@@ -18,7 +18,7 @@
           <div class="border-line"></div>
           <ul class="borrowing-users">
             <li class="borrowing-user">
-              <nuxt-link to="/">
+              <nuxt-link to="/user/1">
                 <span class="icon">○</span>
                 <span>otani</span>
               </nuxt-link>

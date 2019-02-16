@@ -3,7 +3,7 @@
     <!-- ヘッダー -->
     <nav class="columns is-vcentered has-text-white nav">
       <div class="column is-2 is-mobile has-background-white brand-logo-area">
-        <a class="brand-logo">Edmond</a>
+        <nuxt-link to="/" class="brand-logo">Edmond</nuxt-link>
       </div>
       <div class="column search-area">
         <div class>
@@ -12,7 +12,7 @@
       </div>
 
       <div class="column is-2">
-        <a class>hoge@giftee.co</a>
+        <nuxt-link to="/user/1">hoge@giftee.co</nuxt-link>
         <!-- ドロップダウンが来るはず -->
       </div>
     </nav>

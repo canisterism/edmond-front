@@ -1,6 +1,6 @@
 <template>
   <nuxt-link
-    to="book/1"
+    to="/book/1"
     class="card-box column is-one-fifth-desktop is-5-mobile is-one-quarter-tablet"
   >
     <div class="card-box-background">
