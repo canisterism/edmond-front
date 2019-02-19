@@ -4,14 +4,18 @@ section#signup
     .message-container.column.is-10-mobile.is-7-tablet.is-6-desktop.is-4-fullhd
       h1 会員登録
       p Edmondを使うためには、Googleアカウントでの登録が必要です。
-      .google-signup-button Googleアカウントで登録する(仮)
+      firebaseAuth
       .line
       .login-button
         nuxt-link(to="login") ログインはこちら
 </template>
 
 <script>
-export default {}
+import FirebaseAuth from '~/components/FirebaseAuth.vue'
+
+export default {
+  components: { FirebaseAuth }
+}
 </script>
 
 

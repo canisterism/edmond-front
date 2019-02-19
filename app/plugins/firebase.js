@@ -11,4 +11,9 @@ if (!firebase.app.length) {
   })
 }
 
+// eslint-disable-next-line no-console
+console.log('~plugins/firebase is loaded.')
+// eslint-disable-next-line no-console
+console.log(firebase)
+
 export default firebase
