@@ -2,6 +2,7 @@
   <section class>
     <!-- ヘッダー -->
     <nav class="columns is-vcentered has-text-white nav">
+      <!-- navにborder-bottom -->
       <div class="column is-2 is-mobile has-background-white brand-logo-area">
         <nuxt-link to="/" class="brand-logo">Edmond</nuxt-link>
       </div>
@@ -22,7 +23,9 @@
 <style scoped lang="scss">
 .nav {
   padding: 0.8rem;
+  padding-bottom: 0;
   text-align: center;
+  border-bottom: white solid 0.5px;
 }
 
 .brand-logo-area {

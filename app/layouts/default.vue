@@ -1,5 +1,5 @@
 <template>
-  <div class="has-background-base has-text-white">
+  <div class="main-container has-background-base has-text-white">
     <the-nav-bar></the-nav-bar>
     <nuxt/>
   </div>
@@ -14,5 +14,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+.main-container {
+  min-height: 100vh;
+  min-width: 100vw;
+}
 </style>
