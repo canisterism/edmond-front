@@ -3,10 +3,7 @@
     <div class="columns is-centered">
       <div class="user-info-area column is-one-fifth">
         <div class="icon-image">
-          <img
-            src="https://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/edmond-honda-street-fighter-alpha-3-78.3.jpg"
-            alt
-          >
+          <img src="~/assets/images/edmond-honda.jpg" alt>
         </div>
         <div class="name">Otani</div>
         <div class="email">hoge@hoge.co.jp</div>
@@ -58,6 +55,7 @@ h4 {
 
 .user-info-area {
   text-align: center;
+  margin-top: 1rem; //付け焼き刃
 }
 .icon-image {
   text-align: center;
