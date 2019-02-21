@@ -6,8 +6,9 @@ section#signup
       p Edmondを使うためには、Googleアカウントでの登録が必要です。
       firebaseAuth
       .line
-      .login-button
-        nuxt-link(to="login") ログインはこちら
+      .login-button-area
+        .login-button
+          nuxt-link(to="login") ログインはこちら
 </template>
 
 <script>
@@ -48,14 +49,25 @@ export default {
   border: #c6c7d1 solid 1px;
   margin: 0.5rem;
 }
-.login-button {
-  background: #47b1df;
-  color: white;
-  padding: 1rem;
-  margin: 1rem auto;
-  width: 80%;
+.login-button-area {
   text-align: center;
-  border-radius: 5px;
+}
+.login-button {
+  text-align: center;
+  display: inline-block;
+  background: #47b1df;
+  direction: ltr;
+  font-weight: 500;
+  height: auto;
+  line-height: normal;
+  max-width: 220px;
+  min-height: 40px;
+  padding: 8px 16px;
+  width: 100%;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  margin: 1rem;
+
   > a {
     color: inherit;
     font-weight: bold;
