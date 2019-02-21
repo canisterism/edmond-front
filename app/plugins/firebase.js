@@ -9,6 +9,7 @@ const config = {
   messagingSenderId: '1097970375016'
 }
 
+// ダメなのは分かっているが動かないので後で直す
 try {
   !firebase.apps.length ? firebase.initializeApp(config) : firebase.app()
   // eslint-disable-next-line prettier/prettier
