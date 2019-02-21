@@ -3,12 +3,12 @@
 </template>
 
 <script>
-import firebase from '~/plugins/firebase'
+import fb from '~/plugins/firebase'
 import 'firebase/auth'
 
 const uiConfig = {
   signInSuccessUrl: '/',
-  signInOptions: [firebase.auth.GoogleAuthProvider.PROVIDER_ID]
+  signInOptions: [fb.auth.GoogleAuthProvider.PROVIDER_ID]
 }
 
 export default {
@@ -18,7 +18,7 @@ export default {
       const firebaseui = require('firebaseui')
       const ui =
         firebaseui.auth.AuthUI.getInstance() ||
-        new firebaseui.auth.AuthUI(firebase.auth())
+        new firebaseui.auth.AuthUI(fb.auth())
       ui.start('#firebaseui-auth-container', uiConfig)
     }
   }
