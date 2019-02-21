@@ -56,8 +56,8 @@ export default {
   text-align: center;
   display: inline-block;
   background: #47b1df;
-  direction: ltr;
   font-weight: 500;
+  border-radius: 2px;
   height: auto;
   line-height: normal;
   max-width: 220px;
