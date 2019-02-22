@@ -18,7 +18,7 @@ export default {
         callbacks: {
           signInSuccessWithAuthResult: function(authResult) {
             // eslint-disable-next-line no-console
-            console.log(authResult)
+            // this.$store.dispatch()
           }
         },
         signInFlow: 'popup'
