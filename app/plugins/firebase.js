@@ -1,5 +1,5 @@
-import firebase from 'firebase'
-// Initialize Firebase
+import firebase from 'firebase/app'
+import 'firebase/auth'
 const config = {
   apiKey: 'AIzaSyAfHHY0GsrcZ4IIGWUFnHp9191e0tS46NI',
   authDomain: 'eddie-117e6.firebaseapp.com',
@@ -9,10 +9,11 @@ const config = {
   messagingSenderId: '1097970375016'
 }
 
-// ダメなのは分かっているが動かないので後で直す
-try {
-  !firebase.apps.length ? firebase.initializeApp(config) : firebase.app()
-  // eslint-disable-next-line prettier/prettier
-} catch { }
-const fb = firebase
-export default fb
+if (!firebase.apps.length) {
+  firebase.initializeApp(config)
+}
+
+export const authProvider = {
+  Google: firebase.auth.GoogleAuthProvider.PROVIDER_ID
+}
+export const auth = firebase.auth()

@@ -3,24 +3,35 @@
 </template>
 
 <script>
-import fb from '~/plugins/firebase'
-import 'firebase/auth'
-
-const uiConfig = {
-  signInSuccessUrl: '/',
-  signInOptions: [fb.auth.GoogleAuthProvider.PROVIDER_ID]
-}
+import { auth, authProvider } from '~/plugins/firebase'
 
 export default {
+  name: 'Login',
   mounted() {
     if (process.browser) {
-      require('firebaseui/dist/firebaseui.css')
       const firebaseui = require('firebaseui')
       const ui =
-        firebaseui.auth.AuthUI.getInstance() ||
-        new firebaseui.auth.AuthUI(fb.auth())
-      ui.start('#firebaseui-auth-container', uiConfig)
+        firebaseui.auth.AuthUI.getInstance() || new firebaseui.auth.AuthUI(auth)
+      const config = {
+        signInOptions: [authProvider.Google],
+        signInSuccessUrl: '/',
+        callbacks: {
+          signInSuccessWithAuthResult: function(authResult) {
+            // eslint-disable-next-line no-console
+            console.log(authResult)
+          }
+        },
+        uiShown: function() {
+          // eslint-disable-next-line no-console
+          console.log('uiShown is called.')
+        },
+        signInFlow: 'popup'
+      }
+      ui.start('#firebaseui-auth-container', config)
     }
   }
 }
 </script>
+
+<style src='firebaseui/dist/firebaseui.css'>
+</style>
