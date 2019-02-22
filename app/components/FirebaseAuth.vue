@@ -21,10 +21,6 @@ export default {
             console.log(authResult)
           }
         },
-        uiShown: function() {
-          // eslint-disable-next-line no-console
-          console.log('uiShown is called.')
-        },
         signInFlow: 'popup'
       }
       ui.start('#firebaseui-auth-container', config)
