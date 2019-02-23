@@ -33,7 +33,8 @@ import BookCard from '~/components/BookCard.vue'
 export default {
   components: {
     BookCard
-  }
+  },
+  middleware: 'authentication'
 }
 </script>
 
