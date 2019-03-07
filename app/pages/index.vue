@@ -18,10 +18,21 @@
 
 <script>
 import BookCard from '~/components/BookCard.vue'
+import allUsers from '~/apollo/queries/allUsers'
 
 export default {
   components: {
     BookCard
+  },
+  apollo: {
+    allUsers: {
+      query: allUsers,
+      variables() {
+        return {
+          user: this.user
+        }
+      }
+    }
   }
 }
 </script>
