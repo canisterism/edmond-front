@@ -16,15 +16,15 @@
     <h4>借りている本</h4>
     <div class="border-line"></div>
     <div class="main-container columns is-multiline">
-      <book-card></book-card>
-      <book-card></book-card>
-      <book-card></book-card>
-      <book-card></book-card>
-      <book-card></book-card>
+      <book-card/>
+      <book-card/>
+      <book-card/>
+      <book-card/>
+      <book-card/>
       <div class="line"></div>
       <!-- ↑↑↑↑要検討↑↑↑↑ -->
-      <book-card></book-card>
-      <book-card></book-card>
+      <book-card/>
+      <book-card/>
       <!-- メインコンテンツ おわり-->
     </div>
   </section>

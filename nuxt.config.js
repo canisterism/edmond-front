@@ -8,9 +8,8 @@ module.exports = {
    */
   head: {
     title: pkg.name,
-    meta: [{
-        charset: 'utf-8'
-      },
+    meta: [
+      { charset: 'utf-8' },
       {
         name: 'viewport',
         content: 'width=device-width, initial-scale=1'
@@ -21,11 +20,13 @@ module.exports = {
         content: pkg.description
       }
     ],
-    link: [{
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: '/favicon.ico'
-    }]
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico'
+      }
+    ]
   },
 
   /*
@@ -38,7 +39,8 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: [{
+  css: [
+    {
       src: 'bulma/bulma.sass',
       lang: 'sass'
     },
@@ -75,7 +77,7 @@ module.exports = {
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: 'https://api.graph.cool/simple/v1/ciyz901en4j590185wkmexyex'
+        httpEndpoint: 'http://localhost:8888/graphql'
       }
     }
   },

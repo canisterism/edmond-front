@@ -2,15 +2,15 @@
   <section class>
     <!-- メインコンテンツ おわり -->
     <div class="main-container columns is-multiline">
-      <book-card></book-card>
-      <book-card></book-card>
-      <book-card></book-card>
-      <book-card></book-card>
-      <book-card></book-card>
+      <book-card/>
+      <book-card/>
+      <book-card/>
+      <book-card/>
+      <book-card/>
       <div class="line"></div>
       <!-- ↑↑↑↑要検討↑↑↑↑ -->
-      <book-card></book-card>
-      <book-card></book-card>
+      <book-card/>
+      <book-card/>
       <!-- メインコンテンツ おわり-->
     </div>
   </section>
@@ -18,18 +18,24 @@
 
 <script>
 import BookCard from '~/components/BookCard.vue'
-import allUsers from '~/apollo/queries/allUsers'
+// eslint-disable-next-line
+import book_by_title from '~/apollo/queries/bookByTitle'
 
 export default {
   components: {
     BookCard
   },
+  data: () => {
+    return {
+      books: {}
+    }
+  },
   apollo: {
-    allUsers: {
-      query: allUsers,
+    book_by_title: {
+      query: book_by_title,
       variables() {
         return {
-          user: this.user
+          title: 'にぎ'
         }
       }
     }
