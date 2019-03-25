@@ -1,5 +1,7 @@
-query {
-  book_by_title(title: title) {
+query bookByTitle($title: String){
+  book_by_title(title: "にぎ") {
+  # must be like this with pages/index.vue :
+  # book_by_title(title: $title) {
     author
     cover
     publisher

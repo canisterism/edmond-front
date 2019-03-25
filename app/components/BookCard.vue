@@ -5,16 +5,13 @@
   >
     <div class="card-box-background">
       <figure class="image">
-        <img src="https://cover.openbd.jp/9784780802047.jpg" alt>
+        <img :src="cover" alt>
       </figure>
       <div class="media-content">
         <div class="content">
-          <div class="is-size-6">おにぎりレシピ101 everyday onigiri</div>
-          <div class="author is-size-7">山田玲子</div>
-          <div class="published_by is-size-7">技術評論社</div>
-          <!-- 出せないので後で消す -->
-          <div class="button">貸出可</div>
-          <!-- 出せないので後で消す -->
+          <div class="is-size-6">{{title}}</div>
+          <div class="author is-size-7">{{author}}</div>
+          <div class="published_by is-size-7">{{publisher}}</div>
         </div>
       </div>
     </div>
@@ -22,7 +19,15 @@
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    author: String,
+    cover: String,
+    publisher: String,
+    isbn: Number,
+    title: String
+  }
+}
 </script>
 
 <style lang="scss" scoped>
