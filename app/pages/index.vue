@@ -3,7 +3,7 @@
     <!-- メインコンテンツ おわり -->
     <div class="main-container columns is-multiline">
       <book-card
-        v-for="book in book_by_title"
+        v-for="book in books"
         :author="book.author"
         :cover="book.cover"
         :publisher="book.publisher"
@@ -26,16 +26,21 @@ export default {
   },
   data: () => {
     return {
-      books: {}
+      books: {},
+      title: 'にぎ'
     }
   },
   apollo: {
-    book_by_title: {
-      query: bookByTitle
-      // variables shoud be used :
-      // variables: {
-      //   title: 'にぎ'
-      // }
+    books: {
+      query: bookByTitle,
+      variables() {
+        return {
+          title: this.title
+        }
+      },
+      update: data => {
+        return data.book_by_title
+      }
     }
   }
 }
