@@ -1,7 +1,7 @@
 <template>
   <section class>
     <!-- メインコンテンツ おわり -->
-    <div class="main-container columns is-multiline">
+    <div class="main-container columns is-multilines">
       <book-card
         v-for="book in books"
         :author="book.author"
@@ -17,31 +17,14 @@
 
 <script>
 import BookCard from '~/components/BookCard.vue'
-// eslint-disable-next-line
-import bookByTitle from '~/apollo/queries/bookByTitle'
+import { mapGetters } from 'vuex'
 
 export default {
   components: {
     BookCard
   },
-  data: () => {
-    return {
-      books: {},
-      title: 'にぎ'
-    }
-  },
-  apollo: {
-    books: {
-      query: bookByTitle,
-      variables() {
-        return {
-          title: this.title
-        }
-      },
-      update: data => {
-        return data.book_by_title
-      }
-    }
+  computed: {
+    ...mapGetters('books', ['books'])
   }
 }
 </script>

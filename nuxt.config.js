@@ -25,6 +25,13 @@ module.exports = {
         rel: 'icon',
         type: 'image/x-icon',
         href: '/favicon.ico'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://use.fontawesome.com/releases/v5.8.1/css/all.css',
+        integrity:
+          'sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf',
+        crossorigin: 'anonymous'
       }
     ]
   },
@@ -65,13 +72,6 @@ module.exports = {
     '@nuxtjs/apollo'
   ],
   /*
-   ** Axios module configuration
-   */
-  axios: {
-    baseURL: 'https://karite-api.herokuapp.com'
-  },
-
-  /*
    ** Apollo module configuration
    */
   apollo: {
@@ -81,7 +81,6 @@ module.exports = {
       }
     }
   },
-
   /*
    ** Build configuration
    */

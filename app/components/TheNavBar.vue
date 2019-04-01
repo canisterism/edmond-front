@@ -1,38 +1,71 @@
 <template>
   <section class>
     <!-- ヘッダー -->
-    <nav class="columns is-vcentered has-text-white nav">
-      <!-- navにborder-bottom -->
-      <div class="column is-2 is-mobile has-background-white brand-logo-area">
+    <nav class="header-nav">
+      <div class="brand-logo-area">
         <nuxt-link to="/" class="brand-logo">Edmond</nuxt-link>
       </div>
-      <div class="column search-area">
-        <div class>
-          <input class="input" type="text">
+      <div class="search-area">
+        <div class="input-area">
+          <input class="input" type="text" v-model="searchWord">
+          <div class="button-area" @click="onClickSearchButton">
+            <i class="fas fa-search"></i>
+          </div>
         </div>
       </div>
-
-      <div class="column is-2">
-        <nuxt-link to="/user/1">hoge@giftee.co</nuxt-link>
-        <!-- ドロップダウンが来るはず -->
-      </div>
+      <div class="menu-area" @click="onClickMenuArea"></div>
     </nav>
   </section>
 </template>
 
+<script>
+// eslint-disable-next-line
+import { mapGetters, mapActions } from 'vuex'
+
+export default {
+  data: () => {
+    return {
+      searchWord: ''
+    }
+  },
+  methods: {
+    async onClickSearchButton() {
+      try {
+        const searchWord = this.searchWord
+        await this.$store.dispatch('books/search', { searchWord })
+        // this.$router.push('/')
+      } catch (e) {
+        // eslint-disable-next-line
+        console.error(e)
+      }
+    },
+    onClickMenuArea() {
+      // eslint-disable-next-line
+      console.log(this.$store)
+    }
+  }
+}
+</script>
+
+
 <style scoped lang="scss">
-.nav {
-  padding: 0.8rem;
-  padding-bottom: 0;
-  text-align: center;
+.header-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 60px;
+  grid-template-areas: 'brand-logo search search search search menu';
   border-bottom: white solid 0.5px;
 }
 
 .brand-logo-area {
-  min-width: 180px;
+  grid-area: brand-logo;
+  background-color: white;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .brand-logo {
+  line-height: 1.9; //fixme: vertical-align doesn't work
   font-size: 2rem;
   font-family: 'Futura';
   font-weight: bold;
@@ -40,20 +73,50 @@
 }
 
 .search-area {
-  @media screen and (max-width: 768px) {
-    width: 98%;
+  grid-area: search;
+  grid-column: 2/6;
+  background-color: #273c6c;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.input-area {
+  padding-right: 30px;
+  padding-left: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .input {
+    border-radius: 4px 0 0 4px;
+    width: 85%;
   }
 
-  @media screen and (min-width: 768px) {
-    width: 65%;
-    padding-left: 2rem;
+  .button-area {
+    width: 15%;
+    height: 36px;
+    background: #0f95ce;
+    border-radius: 0 4px 4px 0;
+    text-align: center;
+    cursor: pointer;
+    > i {
+      display: inline-block;
+      line-height: 2.3; //fixme
+    }
   }
 }
 
-.dropdown-text {
-  color: white;
-  &:hover {
-    background: #355293 !important;
-  }
+.menu-area {
+  grid-area: menu;
+  background-color: #273c6c;
 }
+
+// .dropdown-text {
+//   color: white;
+//   &:hover {
+//     background: #355293 !important;
+//   }
+// }
 </style>
