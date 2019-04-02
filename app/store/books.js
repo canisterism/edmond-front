@@ -8,7 +8,7 @@ export const state = () => ({
 
 export const getters = {
   books: state => state.books,
-  searchWord: state => state.seachWord
+  searchWord: state => state.searchWord
 }
 
 export const mutations = {
