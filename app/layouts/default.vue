@@ -1,7 +1,7 @@
 <template>
-  <div class="main-container has-background-base has-text-white">
+  <div class="main-container">
     <the-nav-bar></the-nav-bar>
-    <nuxt/>
+    <nuxt class="content"/>
   </div>
 </template>
 <script>
@@ -18,5 +18,10 @@ export default {
 .main-container {
   min-height: 100vh;
   min-width: 100vw;
+  background-color: #273c6c;
+  color: white;
+}
+.content {
+  margin: 1rem 2rem;
 }
 </style>

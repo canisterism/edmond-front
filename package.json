@@ -18,7 +18,6 @@
     "@nuxtjs/bulma": "^1.2.1",
     "@nuxtjs/font-awesome": "^1.0.3",
     "@nuxtjs/pwa": "^2.6.0",
-    "bulma": "^0.7.2",
     "cross-env": "^5.2.0",
     "firebase": "^5.8.3",
     "firebaseui": "^3.5.2",

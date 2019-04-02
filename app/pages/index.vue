@@ -1,7 +1,8 @@
 <template>
   <section class>
-    <!-- メインコンテンツ おわり -->
-    <div class="main-container columns is-multilines">
+    <h3 class="number-of-search-hit">検索結果：{{books.length}}件</h3>
+    <div class="line"></div>
+    <div class="main-container">
       <book-card
         v-for="book in books"
         :author="book.author"
@@ -10,7 +11,6 @@
         :isbn="book.isbn"
         :title="book.title"
       />
-      <!-- メインコンテンツ おわり-->
     </div>
   </section>
 </template>
@@ -30,11 +30,17 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.main-container {
-  margin: 1rem;
-}
 .line {
-  border: 1px #cec6bb solid;
+  border: 0.5px white solid;
   width: 100%;
+}
+.number-of-search-hit {
+  margin-bottom: 0.5rem;
+}
+.main-container {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 0.9fr));
+  grid-column-gap: 1rem;
 }
 </style>

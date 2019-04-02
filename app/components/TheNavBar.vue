@@ -7,21 +7,18 @@
       </div>
       <div class="search-area">
         <div class="input-area">
-          <input class="input" type="text" v-model="searchWord">
+          <input class="input" type="text" v-model="searchWord" @keyup.enter="onClickSearchButton">
           <div class="button-area" @click="onClickSearchButton">
             <i class="fas fa-search"></i>
           </div>
         </div>
       </div>
-      <div class="menu-area" @click="onClickMenuArea"></div>
+      <div class="menu-area"></div>
     </nav>
   </section>
 </template>
 
 <script>
-// eslint-disable-next-line
-import { mapGetters, mapActions } from 'vuex'
-
 export default {
   data: () => {
     return {
@@ -33,15 +30,11 @@ export default {
       try {
         const searchWord = this.searchWord
         await this.$store.dispatch('books/search', { searchWord })
-        // this.$router.push('/')
+        this.$router.push('/')
       } catch (e) {
         // eslint-disable-next-line
         console.error(e)
       }
-    },
-    onClickMenuArea() {
-      // eslint-disable-next-line
-      console.log(this.$store)
     }
   }
 }
@@ -90,6 +83,7 @@ export default {
   justify-content: flex-start;
 
   .input {
+    line-height: 2.3;
     border-radius: 4px 0 0 4px;
     width: 85%;
   }
