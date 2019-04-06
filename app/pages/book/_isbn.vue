@@ -2,13 +2,13 @@
   <section class="columns is-centered">
     <div class="column is-half">
       <div class="cover">
-        <img src="https://cover.openbd.jp/9784780802047.jpg" alt>
+        <img :src="book.cover" alt>
       </div>
       <div class="book-info">
         <div class="book-summary">
-          <div class="is-size-4">おにぎりレシピ101 everyday onigiri</div>
-          <div class="author is-size-6">山田玲子</div>
-          <div class="published_by is-size-6">技術評論社</div>
+          <div class="is-size-4">{{ book.title }}</div>
+          <div class="author is-size-6">{{ book.author }}</div>
+          <div class="published_by is-size-6">{{ book.publisher }}</div>
         </div>
 
         <div class="status button">貸出可</div>
@@ -30,7 +30,30 @@
 </template>
 
 <script>
-export default {}
+export default {
+  asyncData({ store, params }) {
+    // fixme: 条件は逆のほうが読みやすい
+    // fixme: bookByIsbn実装されたらコメントアウト解除
+    if (!store.state.books) {
+      // await store.dispatch('books/searchByIsbn', { isbn: params.isbn })
+      // const book = store.state.book
+      // return book
+      const book = {
+        cover: 'hoge',
+        auhor: 'API実装待ち',
+        publisher: 'API実装待ち',
+        title: 'API実装待ち'
+      }
+      return {
+        book: book
+      }
+    } else {
+      return {
+        book: store.getters['books/bookByIsbn'](parseInt(params.isbn))
+      }
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

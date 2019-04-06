@@ -1,0 +1,9 @@
+query bookByIsbn($isbn: Float!) {
+  book_by_isbn(isbn: $isbn) {
+    author
+    cover
+    publisher
+    isbn
+    title
+  }
+}

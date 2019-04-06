@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link to="/book/1" class="card-box">
+  <nuxt-link :to="'/book/' + isbn" class="card-box">
     <div class="card-box-background">
       <figure class="cover-area">
         <img :src="cover" alt>
@@ -33,10 +33,8 @@ export default {
 .cover-area {
   text-align: center;
   margin: 0.6rem auto;
-  height: 20rem;
   > img {
-    height: auto;
-    width: 100%;
+    height: 16rem;
   }
 }
 .card-box-background {
