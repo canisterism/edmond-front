@@ -12,7 +12,7 @@
           <div class="status">
             <i class="fas fa-check"></i>貸出可
           </div>
-          <div class="button borrow" @click="onClickBorrow">借りる(未実装です)</div>
+          <div class="button borrow" @click="onClickBorrow()">借りる(未実装です)</div>
           <div class="borrowing-info">
             <h4>借りている人</h4>
             <ul class="borrowing-users">
@@ -36,25 +36,23 @@
 <script>
 export default {
   asyncData({ store, params }) {
-    // fixme: 条件は逆のほうが読みやすい
-    // fixme: bookByIsbn実装されたらコメントアウト解除
-    // eslint-disable-next-line
-    if (store.state.books.books.length === 0) {
+    if (store.state.books.books.length !== 0) {
+      return {
+        book: store.getters['books/bookByIsbn'](parseInt(params.isbn))
+      }
+    } else {
+      // fixme: bookByIsbn実装されたらコメントアウト解除
       // await store.dispatch('books/searchByIsbn', { isbn: params.isbn })
       // const book = store.state.book
       // return book
       const book = {
         cover: 'hoge',
-        auhor: 'API実装待ち',
+        author: 'API実装待ち',
         publisher: 'API実装待ち',
         title: 'API実装待ち'
       }
       return {
         book: book
-      }
-    } else {
-      return {
-        book: store.getters['books/bookByIsbn'](parseInt(params.isbn))
       }
     }
   },
