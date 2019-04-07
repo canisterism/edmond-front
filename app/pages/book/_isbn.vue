@@ -98,7 +98,7 @@ export default {
 
 .status {
   width: 7rem;
-  background: #0f95ce;
+  background: limegreen;
   text-align: center;
   display: block;
   color: white;
