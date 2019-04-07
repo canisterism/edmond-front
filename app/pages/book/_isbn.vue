@@ -39,7 +39,7 @@ export default {
     // fixme: 条件は逆のほうが読みやすい
     // fixme: bookByIsbn実装されたらコメントアウト解除
     // eslint-disable-next-line
-    if (!store.state.books) {
+    if (store.state.books.books.length === 0) {
       // await store.dispatch('books/searchByIsbn', { isbn: params.isbn })
       // const book = store.state.book
       // return book
