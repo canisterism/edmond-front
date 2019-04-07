@@ -1,28 +1,32 @@
 <template>
-  <section class="columns is-centered">
-    <div class="column is-half">
-      <div class="cover">
-        <img :src="book.cover" alt>
-      </div>
+  <section class>
+    <div class>
       <div class="book-info">
-        <div class="book-summary">
-          <div class="is-size-4">{{ book.title }}</div>
-          <div class="author is-size-6">{{ book.author }}</div>
-          <div class="published_by is-size-6">{{ book.publisher }}</div>
+        <div class="published_by">{{ book.publisher }}</div>
+        <div class="title">{{ book.title }}</div>
+        <div class="author">{{ book.author }}</div>
+        <div class="cover">
+          <img :src="book.cover" alt>
         </div>
-
-        <div class="status button">貸出可</div>
-        <div class="borrow button is-primary">借りる</div>
-        <div class="borrowing-info">
-          <h4>借りている人</h4>
-          <ul class="borrowing-users">
-            <li class="borrowing-user">
+        <div v-if="showBetafunctions">
+          <div class="status">
+            <i class="fas fa-check"></i>貸出可
+          </div>
+          <div class="button borrow" @click="onClickBorrow">借りる(未実装です)</div>
+          <div class="borrowing-info">
+            <h4>借りている人</h4>
+            <ul class="borrowing-users">
               <nuxt-link to="/user/1">
-                <span class="icon">○</span>
-                <span>otani</span>
+                <li class="borrowing-user">
+                  <span>otani</span>
+                </li>
               </nuxt-link>
-            </li>
-          </ul>
+            </ul>
+          </div>
+        </div>
+        <div>
+          開発中の画面を見る
+          <input type="checkbox" v-model="showBetafunctions">
         </div>
       </div>
     </div>
@@ -34,6 +38,7 @@ export default {
   asyncData({ store, params }) {
     // fixme: 条件は逆のほうが読みやすい
     // fixme: bookByIsbn実装されたらコメントアウト解除
+    // eslint-disable-next-line
     if (!store.state.books) {
       // await store.dispatch('books/searchByIsbn', { isbn: params.isbn })
       // const book = store.state.book
@@ -52,24 +57,61 @@ export default {
         book: store.getters['books/bookByIsbn'](parseInt(params.isbn))
       }
     }
+  },
+  data() {
+    return {
+      showBetafunctions: false
+    }
+  },
+  methods: {
+    onClickBorrow() {
+      alert('まだ貸出はできません！ごめんなさい！')
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.cover {
-  width: 100%;
-  margin: 3rem auto 0;
-  text-align: center;
-}
 .book-info {
-  width: 70%;
   margin: 2rem auto 0;
   box-sizing: border-box;
-}
-.author {
+  width: 60%;
+  @media screen and (max-width: 720px) {
+    width: 100%;
+  }
 }
 .published_by {
+  font-size: 0.75rem;
+}
+.author {
+  font-size: 0.75rem;
+}
+.title {
+  font-size: 1.5rem;
+}
+.cover {
+  text-align: center;
+  display: inline-block;
+  margin: 2rem 0;
+  @media screen and (max-width: 480px) {
+    margin: 1rem 0;
+  }
+}
+
+.status {
+  width: 7rem;
+  background: #0f95ce;
+  text-align: center;
+  display: block;
+  color: white;
+  border: none;
+  border-radius: 5px;
+
+  > i {
+    line-height: 2;
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
 }
 
 .button {
@@ -77,13 +119,10 @@ export default {
   margin: 0.5rem auto;
   color: white;
   border: none;
+  text-align: center;
 
-  &.status {
-    width: 20%;
-    margin-left: 0;
-    background: #20a310;
-  }
   &.borrow {
+    display: inline-block;
     background: white;
     border: #0f95ce 1px solid;
     border-radius: 5px;
@@ -93,7 +132,10 @@ export default {
     font-weight: bold;
     height: 2.5rem;
     font-size: 1.2rem;
-    margin: 1rem 9rem 1rem 0;
+    margin: 1rem 0;
+    line-height: 2;
+    min-width: 15rem;
+    max-width: 20rem;
     &:hover {
       color: white;
       background: #0f95ce;
@@ -111,11 +153,20 @@ export default {
 }
 
 .borrowing-user {
-  width: 20%;
+  text-align: center;
+  width: 10rem;
   margin: 1rem 8rem 1rem 0;
   text-decoration: none;
-  background: white;
+  background: #273d6c;
   border-radius: 2px;
   font-size: 1.2rem;
+  color: white;
+  box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.1),
+    0 0 0 1px rgba(10, 10, 10, 0.1);
+  cursor: pointer;
+  &:hover {
+    border: solid 1px white;
+    box-sizing: border-box;
+  }
 }
 </style>

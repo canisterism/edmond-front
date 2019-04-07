@@ -89,7 +89,7 @@ export default {
   }
 
   .button-area {
-    width: 15%;
+    width: 5rem;
     height: 36px;
     background: #0f95ce;
     border-radius: 0 4px 4px 0;
