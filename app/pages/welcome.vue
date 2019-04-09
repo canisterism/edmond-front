@@ -9,7 +9,15 @@
       <nuxt-link to="/">
         <div class="button try">Find your book</div>
       </nuxt-link>
+      <h4 class="top-members">Top Members</h4>
+      <ul class="members">
+        <li>@someone</li>
+        <li>@someone</li>
+        <li>@someone</li>
+      </ul>
     </div>
+    <!-- fixme: 画質が終わっている -->
+    <!-- fixme: コンポーネントで賄った方が良い -->
     <div class="right">
       <div class="cards">
         <div class="card">
@@ -17,24 +25,24 @@
             <img src="~/assets/images/cover_01.png" alt="cover">
           </figure>
           <h4>初めてのJavaScript</h4>
-          <p>Ehan Brown</p>
-          <p>O'REILLY JAPAN</p>
+          <p class="author">Ehan Brown</p>
+          <p class="publisher">O'REILLY JAPAN</p>
         </div>
         <div class="card">
           <figure class="cover">
             <img src="~/assets/images/cover_02.png" alt="cover">
           </figure>
           <h4>ゼロから作るDeepLearning</h4>
-          <p>Yasutaka Saito</p>
-          <p>O'REILLY JAPAN</p>
+          <p class="author">Yasutaka Saito</p>
+          <p class="publisher">O'REILLY JAPAN</p>
         </div>
         <div class="card">
           <figure class="cover">
             <img src="~/assets/images/cover_03.png" alt="cover">
           </figure>
           <h4>プログラミングRust</h4>
-          <p>Ehan Brown</p>
-          <p>O'REILLY JAPAN</p>
+          <p class="author">Ehan Brown</p>
+          <p class="publisher">O'REILLY JAPAN</p>
         </div>
       </div>
     </div>
@@ -48,6 +56,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// font-sizeとcolorはまとめる
 .container {
   background: linear-gradient(90deg, #fff 20%, #273c6c 20%);
   height: 100vh;
@@ -105,10 +114,22 @@ export default {
   }
 }
 
+.top-members {
+  margin-top: 5vh;
+  display: block;
+}
+.members {
+  font-size: 0.75rem;
+  > li {
+    margin: 1vh 0;
+  }
+}
+
 .right {
   height: 100%;
   width: 65%;
   padding-top: 15vh;
+  overflow: hidden;
 }
 
 .cards {
@@ -121,5 +142,11 @@ export default {
 }
 .cover > img {
   width: 20vw;
+}
+.author {
+  font-size: 0.8rem;
+}
+.publisher {
+  font-size: 0.75rem;
 }
 </style>
