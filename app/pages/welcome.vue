@@ -10,7 +10,34 @@
         <div class="button try">Find your book</div>
       </nuxt-link>
     </div>
-    <div class="right"></div>
+    <div class="right">
+      <div class="cards">
+        <div class="card">
+          <figure class="cover">
+            <img src="~/assets/images/cover_01.png" alt="cover">
+          </figure>
+          <h4>初めてのJavaScript</h4>
+          <p>Ehan Brown</p>
+          <p>O'REILLY JAPAN</p>
+        </div>
+        <div class="card">
+          <figure class="cover">
+            <img src="~/assets/images/cover_02.png" alt="cover">
+          </figure>
+          <h4>ゼロから作るDeepLearning</h4>
+          <p>Yasutaka Saito</p>
+          <p>O'REILLY JAPAN</p>
+        </div>
+        <div class="card">
+          <figure class="cover">
+            <img src="~/assets/images/cover_03.png" alt="cover">
+          </figure>
+          <h4>プログラミングRust</h4>
+          <p>Ehan Brown</p>
+          <p>O'REILLY JAPAN</p>
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -73,7 +100,7 @@ export default {
     height: 3.5rem;
     min-width: 80%;
     margin-left: 0.5rem;
-    margin-top: 13rem;
+    margin-top: 10rem;
     line-height: 3.5;
   }
 }
@@ -82,5 +109,17 @@ export default {
   height: 100%;
   width: 65%;
   padding-top: 15vh;
+}
+
+.cards {
+  display: flex;
+  padding-left: 5rem;
+}
+.card {
+  margin-left: 1rem;
+  font-family: Hiragino Sans CNS;
+}
+.cover > img {
+  width: 20vw;
 }
 </style>
