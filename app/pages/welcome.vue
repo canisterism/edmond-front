@@ -22,7 +22,7 @@
       <div class="cards">
         <div class="card">
           <figure class="cover">
-            <img src="~/assets/images/cover_01.png" alt="cover">
+            <img src="~/assets/images/cover_01.jpg" alt="cover">
           </figure>
           <h4>初めてのJavaScript</h4>
           <p class="author">Ehan Brown</p>
@@ -30,7 +30,7 @@
         </div>
         <div class="card">
           <figure class="cover">
-            <img src="~/assets/images/cover_02.png" alt="cover">
+            <img src="~/assets/images/cover_02.jpg" alt="cover">
           </figure>
           <h4>ゼロから作るDeepLearning</h4>
           <p class="author">Yasutaka Saito</p>
@@ -38,10 +38,11 @@
         </div>
         <div class="card">
           <figure class="cover">
-            <img src="~/assets/images/cover_03.png" alt="cover">
+            <img src="~/assets/images/cover_03.jpg" alt="cover">
           </figure>
-          <h4>プログラミングRust</h4>
-          <p class="author">Ehan Brown</p>
+          <h4>リーダブルコード</h4>
+          <p class="author">Dustin Boswell</p>
+          <p class="author">Trevor Foucher</p>
           <p class="publisher">O'REILLY JAPAN</p>
         </div>
       </div>
@@ -118,17 +119,14 @@ export default {
   margin-top: 5vh;
   display: block;
 }
-.members {
-  font-size: 0.75rem;
-  > li {
-    margin: 1vh 0;
-  }
+.members > li {
+  margin: 1vh 0;
 }
 
 .right {
   height: 100%;
   width: 65%;
-  padding-top: 15vh;
+  padding-top: 25vh;
   overflow: hidden;
 }
 
@@ -141,12 +139,11 @@ export default {
   font-family: Hiragino Sans CNS;
 }
 .cover > img {
-  width: 20vw;
+  width: auto;
+  height: 25vw;
 }
-.author {
-  font-size: 0.8rem;
-}
+.author,
 .publisher {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
 }
 </style>
