@@ -29,7 +29,7 @@ export default {
     async onClickSearchButton() {
       try {
         const searchWord = this.searchWord
-        await this.$store.dispatch('books/searchByTitle', { searchWord })
+        await this.$store.dispatch('books/searchByText', { searchWord })
         this.$router.push('/')
       } catch (e) {
         // eslint-disable-next-line

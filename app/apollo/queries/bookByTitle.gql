@@ -1,9 +1,0 @@
-query bookByTitle($title: String!){
-  book_by_title(title: $title) {
-    author
-    cover
-    publisher
-    isbn
-    title
-  }
-}

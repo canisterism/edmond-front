@@ -1,0 +1,9 @@
+query bookBytext($text: String!){
+  book_by_text(text: $text) {
+    author
+    cover
+    publisher
+    isbn
+    title
+  }
+}
