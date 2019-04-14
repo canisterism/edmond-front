@@ -86,7 +86,7 @@ export default {
 
 .status
   width: 7rem
-  background: limegreen
+  background: $success-color
   text-align: center
   display: block
   color: $second-base-color
@@ -107,10 +107,10 @@ export default {
   &.borrow
     display: inline-block
     background: $second-base-color
-    border: #0f95ce 1px solid
+    border: $skyblue 1px solid
     border-radius: 5px
     box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1)
-    color: #0f95ce
+    color: $skyblue
     font-weight: bold
     height: 2.5rem
     margin: 1rem 0
@@ -119,7 +119,7 @@ export default {
     max-width: 20rem
     &:hover
       color: $second-base-color
-      background: #0f95ce
+      background: $skyblue
       transition: all 0.1s ease 0s
 
 

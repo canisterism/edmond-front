@@ -65,12 +65,12 @@ export default {
   line-height: 1.9 //fixme: vertical-align doesn't work
   font-family: 'Futura'
   font-weight: bold
-  color: #273c6c
+  color: $base-color
 
 .search-area
   grid-area: search
   grid-column: 2/6
-  background-color: #273c6c
+  background-color: $base-color
   display: flex
   align-items: center
   justify-content: flex-start
@@ -94,7 +94,7 @@ export default {
   .button-area
     width: 5rem
     height: 36px
-    background: #0f95ce
+    background: $skyblue
     border-radius: 0 4px 4px 0
     text-align: center
     cursor: pointer
@@ -104,7 +104,7 @@ export default {
 
 .menu-area
   grid-area: menu
-  background-color: #273c6c
+  background-color: $base-color
   @media screen and (max-width: 480px)
     grid-column: 1
     grid-row: auto

@@ -58,7 +58,7 @@ export default {
 
 <style lang="sass" scoped>
 .container
-  background: linear-gradient(90deg, #fff 20%, #273c6c 20%)
+  background: linear-gradient(90deg, #fff 20%, $base-color 20%)
   height: 100vh
   display: flex
 
@@ -67,17 +67,17 @@ export default {
   width: 35%
   padding-top: 15vh
   padding-left: 8.5vw
-  color: #273c6c
+  color: $base-color
 
 .logo
   font-size: 5vw
   font-family: Futura
   color: $second-base-color
   > span
-    color: #273c6c
+    color: $base-color
 
 .line
-  border: 0.5px #273c6c solid
+  border: 0.5px $base-color solid
   width: 30%
   margin-top: 3vh
   margin-bottom: 2vh
@@ -95,7 +95,7 @@ export default {
     background: yellow
     border-radius: 30px
     box-shadow: 10px 5px 5px rgba(20, 20, 10, 0.1), 0 0 0 1px rgba(20, 10, 10, 0.1)
-    color: #273c6c
+    color: $base-color
     font-weight: bold
     height: 3.5rem
     min-width: 80%
