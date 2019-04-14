@@ -78,7 +78,10 @@ module.exports = {
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: 'http://localhost:8888/graphql'
+        httpEndpoint:
+          // set environment variable if you want to run locally: export EDMOND_API_ENDPOINT=http://localhost:8888/graphql
+          process.env.EDMOND_API_ENDPOINT ||
+          'http://192.168.100.28:8888/graphql'
       }
     }
   },
