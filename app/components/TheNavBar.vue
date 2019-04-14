@@ -1,5 +1,5 @@
 <template>
-  <section class>
+  <section class="section-navbar">
     <!-- ヘッダー -->
     <nav class="header-nav">
       <div class="brand-logo-area">
@@ -42,6 +42,10 @@ export default {
 
 
 <style lang="sass" scoped>
+.section-navbar
+  position: sticky
+  top: 0
+
 .header-nav
   display: grid
   grid-template-rows: 60px
