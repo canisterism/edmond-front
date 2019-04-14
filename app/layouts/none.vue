@@ -9,5 +9,5 @@
   min-height: 100vh
   min-width: 100vw
   background-color: #273c6c
-  color: white
+  color: $second-base-color
 </style>

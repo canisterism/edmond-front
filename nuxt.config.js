@@ -52,10 +52,10 @@ module.exports = {
    */
   css: [
     {
-      src: '@/assets/ress.css'
+      src: '@/assets/stylesheets/base/ress.css'
     },
     {
-      src: '@/assets/main.sass'
+      src: '@/assets/stylesheets/main.sass'
     }
   ],
   /*
@@ -70,7 +70,8 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/apollo'
+    '@nuxtjs/apollo',
+    '@nuxtjs/style-resources'
   ],
   /*
    ** Apollo module configuration
@@ -84,6 +85,14 @@ module.exports = {
           'http://192.168.100.28:8888/graphql'
       }
     }
+  },
+  /*
+  ** style-resources module configuration
+    ** This module makes css(sass) variables global.
+    ** ref: https://github.com/nuxt-community/style-resources-module
+  */
+  styleResources: {
+    sass: './assets/stylesheets/base/_variables.sass'
   },
   /*
    ** Build configuration

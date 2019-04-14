@@ -72,7 +72,7 @@ export default {
 .logo
   font-size: 5vw
   font-family: Futura
-  color: white
+  color: $second-base-color
   > span
     color: #273c6c
 
@@ -85,7 +85,7 @@ export default {
 .button
   display: block
   margin: 0.5rem auto
-  color: white
+  color: $second-base-color
   border: none
   text-align: center
 

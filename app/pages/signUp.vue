@@ -29,7 +29,7 @@ export default {}
     font-weight: bold
 
 .google-signup-button
-  background: white
+  background: $second-base-color
   color: grey
   padding: 1rem
   margin: 1rem auto
@@ -42,7 +42,7 @@ export default {}
 
 .login-button
   background: #47b1df
-  color: white
+  color: $second-base-color
   padding: 1rem
   margin: 1rem auto
   width: 80%

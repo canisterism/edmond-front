@@ -22,18 +22,17 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-.line {
-  border: 0.5px white solid;
-  width: 100%;
-}
-.number-of-search-hit {
-  margin-bottom: 0.5rem;
-}
-.main-container {
-  margin-top: 1rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(14rem, 0.9fr));
-  grid-column-gap: 1rem;
-}
+<style scoped lang="sass">
+.line
+  border: 0.5px $second-base-color solid
+  width: 100%
+
+.number-of-search-hit
+  margin-bottom: 0.5rem
+
+.main-container
+  margin-top: 1rem
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 0.9fr))
+  grid-column-gap: 1rem
 </style>

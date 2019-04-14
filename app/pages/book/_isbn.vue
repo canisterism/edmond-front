@@ -89,7 +89,7 @@ export default {
   background: limegreen
   text-align: center
   display: block
-  color: white
+  color: $second-base-color
   border: none
   border-radius: 5px
   > i
@@ -100,13 +100,13 @@ export default {
 .button
   display: block
   margin: 0.5rem auto
-  color: white
+  color: $second-base-color
   border: none
   text-align: center
 
   &.borrow
     display: inline-block
-    background: white
+    background: $second-base-color
     border: #0f95ce 1px solid
     border-radius: 5px
     box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1)
@@ -118,7 +118,7 @@ export default {
     min-width: 15rem
     max-width: 20rem
     &:hover
-      color: white
+      color: $second-base-color
       background: #0f95ce
       transition: all 0.1s ease 0s
 
@@ -127,7 +127,7 @@ export default {
   > h4
     font-weight: bold
     padding-bottom: 0.2rem
-    border-bottom: 2px white solid
+    border-bottom: 2px $second-base-color solid
 
 
 .borrowing-user
@@ -137,10 +137,10 @@ export default {
   text-decoration: none
   background: #273d6c
   border-radius: 2px
-  color: white
+  color: $second-base-color
   box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1)
   cursor: pointer
   &:hover
-    border: solid 1px white
+    border: solid 1px $second-base-color
     box-sizing: border-box
 </style>
