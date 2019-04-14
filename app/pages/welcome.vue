@@ -5,7 +5,7 @@
         <span>Edm</span>ond
       </h1>
       <div class="line"></div>
-      <div class="phrase">さあ、見つけよう。</div>
+      <div class="font-small">さあ、見つけよう。</div>
       <nuxt-link to="/">
         <div class="button try">Find your book</div>
       </nuxt-link>
@@ -25,25 +25,25 @@
             <img src="~/assets/images/cover_01.jpg" alt="cover">
           </figure>
           <h4>初めてのJavaScript</h4>
-          <p class="author">Ehan Brown</p>
-          <p class="publisher">O'REILLY JAPAN</p>
+          <p class="font-small">Ehan Brown</p>
+          <p class="font-small">O'REILLY JAPAN</p>
         </div>
         <div class="card">
           <figure class="cover">
             <img src="~/assets/images/cover_02.jpg" alt="cover">
           </figure>
           <h4>ゼロから作るDeepLearning</h4>
-          <p class="author">Yasutaka Saito</p>
-          <p class="publisher">O'REILLY JAPAN</p>
+          <p class="font-small">Yasutaka Saito</p>
+          <p class="font-small">O'REILLY JAPAN</p>
         </div>
         <div class="card">
           <figure class="cover">
             <img src="~/assets/images/cover_03.jpg" alt="cover">
           </figure>
           <h4>リーダブルコード</h4>
-          <p class="author">Dustin Boswell</p>
-          <p class="author">Trevor Foucher</p>
-          <p class="publisher">O'REILLY JAPAN</p>
+          <p class="font-small">Dustin Boswell</p>
+          <p class="font-small">Trevor Foucher</p>
+          <p class="font-small">O'REILLY JAPAN</p>
         </div>
       </div>
     </div>
@@ -57,7 +57,6 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-// font-sizeとcolorはまとめる
 .container
   background: linear-gradient(90deg, #fff 20%, #273c6c 20%)
   height: 100vh
@@ -82,8 +81,6 @@ export default {
   width: 30%
   margin-top: 3vh
   margin-bottom: 2vh
-.phrase
-  font-size: 0.8rem
 
 .button
   display: block
@@ -130,8 +127,4 @@ export default {
 .cover > img
   width: auto
   height: 25vw
-
-.author,
-.publisher
-  font-size: 0.8rem
 </style>

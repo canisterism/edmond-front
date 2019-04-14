@@ -55,7 +55,7 @@ module.exports = {
       src: '@/assets/ress.css'
     },
     {
-      src: '@/assets/main.scss'
+      src: '@/assets/main.sass'
     }
   ],
   /*

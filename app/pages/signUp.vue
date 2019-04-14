@@ -2,7 +2,7 @@
 section#signup
   .main-container.columns.is-vcentered.is-centered
     .message-container.column.is-10-mobile.is-7-tablet.is-6-desktop.is-4-fullhd
-      h1 会員登録
+      h1.font-xlarge 会員登録
       p Edmondを使うためには、Googleアカウントでの登録が必要です。
       .google-signup-button Googleアカウントで登録する(仮)
       .line
@@ -27,7 +27,6 @@ export default {}
 
   > h1
     font-weight: bold
-    font-size: 1.5rem
 
 .google-signup-button
   background: white

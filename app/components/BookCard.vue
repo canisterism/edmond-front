@@ -7,7 +7,7 @@
       <div class="media-content">
         <div class="content">
           <div class>{{title}}</div>
-          <div class="author">{{author}}</div>
+          <div class="author font-small">{{author}}</div>
         </div>
       </div>
     </div>
@@ -44,11 +44,5 @@ export default {
 
 .author
   margin-top: 0.5rem
-  font-size: 0.5rem
 
-.button
-  margin-top: 0.8rem
-  font-size: 0.8rem
-  background-color: yellow
-  color: #273c6c
 </style>

@@ -2,9 +2,9 @@
   <section class>
     <div class>
       <div class="book-info">
-        <div class="published_by">{{ book.publisher }}</div>
-        <div class="title">{{ book.title }}</div>
-        <div class="author">{{ book.author }}</div>
+        <div class="font-small">{{ book.publisher }}</div>
+        <div class="font-xlarge">{{ book.title }}</div>
+        <div class="font-small">{{ book.author }}</div>
         <div class="cover">
           <img :src="book.cover" alt>
         </div>
@@ -12,10 +12,10 @@
           <div class="status">
             <i class="fas fa-check"></i>貸出可
           </div>
-          <div class="button borrow" @click="onClickBorrow()">借りる(未実装です)</div>
+          <div class="button borrow font-small" @click="onClickBorrow()">借りる(未実装です)</div>
           <div class="borrowing-info">
             <h4>借りている人</h4>
-            <ul class="borrowing-users">
+            <ul class="borrowing-users font-small">
               <nuxt-link to="/user/1">
                 <li class="borrowing-user">
                   <span>otani</span>
@@ -77,12 +77,6 @@ export default {
   @media screen and (max-width: 720px)
     width: 100%
 
-.published_by
-  font-size: 0.75rem
-.author
-  font-size: 0.75rem
-.title
-  font-size: 1.5rem
 .cover
   text-align: center
   display: inline-block
@@ -119,7 +113,6 @@ export default {
     color: #0f95ce
     font-weight: bold
     height: 2.5rem
-    font-size: 1.2rem
     margin: 1rem 0
     line-height: 2
     min-width: 15rem
@@ -144,7 +137,6 @@ export default {
   text-decoration: none
   background: #273d6c
   border-radius: 2px
-  font-size: 1.2rem
   color: white
   box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1)
   cursor: pointer

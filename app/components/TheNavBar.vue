@@ -3,7 +3,7 @@
     <!-- ヘッダー -->
     <nav class="header-nav">
       <div class="brand-logo-area">
-        <nuxt-link to="/" class="brand-logo">Edmond</nuxt-link>
+        <nuxt-link to="/" class="brand-logo font-xxlarge">Edmond</nuxt-link>
       </div>
       <div class="search-area">
         <div class="input-area">
@@ -67,7 +67,6 @@ export default {
 
 .brand-logo {
   line-height: 1.9; //fixme: vertical-align doesn't work
-  font-size: 2rem;
   font-family: 'Futura';
   font-weight: bold;
   color: #273c6c;
