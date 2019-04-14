@@ -14,14 +14,14 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.main-container {
-  min-height: 100vh;
-  min-width: 100vw;
-  background-color: #273c6c;
-  color: white;
-}
-.content {
-  margin: 1rem 2rem;
-}
+<style lang="sass" scoped>
+.main-container
+  min-height: 100vh
+  min-width: 100vw
+  background-color: #273c6c
+  color: white
+
+.content
+  margin: 1rem 2rem
+
 </style>

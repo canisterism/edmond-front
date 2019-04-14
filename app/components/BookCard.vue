@@ -26,39 +26,29 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.card-box {
-  height: 100%;
-}
-.cover-area {
-  text-align: center;
-  margin: 0.6rem auto;
-  > img {
-    height: 16rem;
-  }
-}
-.card-box-background {
-  border-radius: 6px;
-  padding: 1rem;
-  background: linear-gradient(
-    rgba(39, 60, 108, 0.8),
-    rgba(139, 175, 255, 0.3),
-    rgba(39, 60, 108, 0.8)
-  );
-  box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.1),
-    0 0 0 1px rgba(10, 10, 10, 0.1);
-  height: 100%;
-}
+<style lang="sass" scoped>
+.card-box
+  height: 100%
+.cover-area
+  text-align: center
+  margin: 0.6rem auto
+  > img
+      height: 16rem
 
-.author {
-  margin-top: 0.5rem;
-  font-size: 0.5rem;
-}
+.card-box-background
+  border-radius: 6px
+  padding: 1rem
+  background: linear-gradient( rgba(39, 60, 108, 0.8), rgba(139, 175, 255, 0.3), rgba(39, 60, 108, 0.8) )
+  box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1)
+  height: 100%
 
-.button {
-  margin-top: 0.8rem;
-  font-size: 0.8rem;
-  background-color: yellow;
-  color: #273c6c;
-}
+.author
+  margin-top: 0.5rem
+  font-size: 0.5rem
+
+.button
+  margin-top: 0.8rem
+  font-size: 0.8rem
+  background-color: yellow
+  color: #273c6c
 </style>

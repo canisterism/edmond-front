@@ -69,102 +69,86 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.book-info {
-  margin: 2rem auto 0;
-  box-sizing: border-box;
-  width: 60%;
-  @media screen and (max-width: 720px) {
-    width: 100%;
-  }
-}
-.published_by {
-  font-size: 0.75rem;
-}
-.author {
-  font-size: 0.75rem;
-}
-.title {
-  font-size: 1.5rem;
-}
-.cover {
-  text-align: center;
-  display: inline-block;
-  margin: 2rem 0;
-  @media screen and (max-width: 480px) {
-    margin: 1rem 0;
-  }
-}
+<style lang="sass" scoped>
+.book-info
+  margin: 2rem auto 0
+  box-sizing: border-box
+  width: 60%
+  @media screen and (max-width: 720px)
+    width: 100%
 
-.status {
-  width: 7rem;
-  background: limegreen;
-  text-align: center;
-  display: block;
-  color: white;
-  border: none;
-  border-radius: 5px;
+.published_by
+  font-size: 0.75rem
+.author
+  font-size: 0.75rem
+.title
+  font-size: 1.5rem
+.cover
+  text-align: center
+  display: inline-block
+  margin: 2rem 0
+  @media screen and (max-width: 480px)
+    margin: 1rem 0
 
-  > i {
-    line-height: 2;
-    display: inline-block;
-    margin-right: 0.5rem;
-  }
-}
+.status
+  width: 7rem
+  background: limegreen
+  text-align: center
+  display: block
+  color: white
+  border: none
+  border-radius: 5px
+  > i
+    line-height: 2
+    display: inline-block
+    margin-right: 0.5rem
 
-.button {
-  display: block;
-  margin: 0.5rem auto;
-  color: white;
-  border: none;
-  text-align: center;
+.button
+  display: block
+  margin: 0.5rem auto
+  color: white
+  border: none
+  text-align: center
 
-  &.borrow {
-    display: inline-block;
-    background: white;
-    border: #0f95ce 1px solid;
-    border-radius: 5px;
-    box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.1),
-      0 0 0 1px rgba(10, 10, 10, 0.1);
-    color: #0f95ce;
-    font-weight: bold;
-    height: 2.5rem;
-    font-size: 1.2rem;
-    margin: 1rem 0;
-    line-height: 2;
-    min-width: 15rem;
-    max-width: 20rem;
-    &:hover {
-      color: white;
-      background: #0f95ce;
-      transition: all 0.1s ease 0s;
-    }
-  }
-}
+  &.borrow
+    display: inline-block
+    background: white
+    border: #0f95ce 1px solid
+    border-radius: 5px
+    box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1)
+    color: #0f95ce
+    font-weight: bold
+    height: 2.5rem
+    font-size: 1.2rem
+    margin: 1rem 0
+    line-height: 2
+    min-width: 15rem
+    max-width: 20rem
+    &:hover
+      color: white
+      background: #0f95ce
+      transition: all 0.1s ease 0s
 
-.borrowing-info {
-  > h4 {
-    font-weight: bold;
-    padding-bottom: 0.2rem;
-    border-bottom: 2px white solid;
-  }
-}
 
-.borrowing-user {
-  text-align: center;
-  width: 10rem;
-  margin: 1rem 8rem 1rem 0;
-  text-decoration: none;
-  background: #273d6c;
-  border-radius: 2px;
-  font-size: 1.2rem;
-  color: white;
-  box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.1),
-    0 0 0 1px rgba(10, 10, 10, 0.1);
-  cursor: pointer;
-  &:hover {
-    border: solid 1px white;
-    box-sizing: border-box;
-  }
-}
+.borrowing-info
+  > h4
+    font-weight: bold
+    padding-bottom: 0.2rem
+    border-bottom: 2px white solid
+
+
+.borrowing-user
+  text-align: center
+  width: 10rem
+  margin: 1rem 8rem 1rem 0
+  text-decoration: none
+  background: #273d6c
+  border-radius: 2px
+  font-size: 1.2rem
+  color: white
+  box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1)
+  cursor: pointer
+  &:hover
+    border: solid 1px white
+    box-sizing: border-box
 </style>
