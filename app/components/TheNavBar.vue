@@ -81,7 +81,7 @@ export default {
   @media screen and (max-width: 480px)
     grid-column: 1
     grid-row: auto
-    margin: 1rem 0
+    padding: 1rem 0
 
 .input-area
   margin: 0 1rem
