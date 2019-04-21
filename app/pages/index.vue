@@ -35,7 +35,11 @@ export default {
 .main-container
   margin-top: 1rem
   display: grid
-  grid-template-columns: repeat(auto-fill, minmax(11rem, 0.9fr))
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 0.9fr))
   grid-column-gap: 1rem
   grid-row-gap: 1rem
+  @media screen and (max-width: 480px)
+    grid-column-gap: 0.5rem
+  @media screen and (min-width: 720px)
+    grid-template-columns: repeat(auto-fill, minmax(11rem, 1.5fr))
 </style>

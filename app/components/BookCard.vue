@@ -39,11 +39,11 @@ export default {
   margin: 0.6rem auto
   display: block
   > img
-    height: 15rem
-    width: 12rem
+    height: 12rem
+    width: 100%
     @media screen and (max-width: 480px)
       height: 10rem
-      width: 8rem
+      width: 100%
 
 
 .card-box-background
