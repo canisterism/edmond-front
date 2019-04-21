@@ -1,7 +1,9 @@
 <template>
   <section class>
-    <h3 class="number-of-search-hit">検索結果：{{books.length}}件</h3>
-    <div class="line"></div>
+    <div v-if="searchWord">
+      <h3 class="number-of-search-hit">「{{searchWord}}」の検索結果：{{books.length}}件</h3>
+      <div class="line"></div>
+    </div>
     <div class="main-container">
       <book-card v-for="book in books" v-bind="book"/>
     </div>
@@ -17,7 +19,7 @@ export default {
     BookCard
   },
   computed: {
-    ...mapGetters('books', ['books'])
+    ...mapGetters('books', ['books', 'searchWord'])
   }
 }
 </script>
@@ -35,4 +37,5 @@ export default {
   display: grid
   grid-template-columns: repeat(auto-fill, minmax(14rem, 0.9fr))
   grid-column-gap: 1rem
+  grid-row-gap: 1rem
 </style>
