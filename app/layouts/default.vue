@@ -27,5 +27,7 @@ export default {
 .content
   margin: 1rem 2rem
   min-height: 80vh
+  @media screen and (max-width: 480px)
+    margin: 1rem 0.5rem
 
 </style>

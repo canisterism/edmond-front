@@ -41,6 +41,10 @@ export default {
   > img
     height: 15rem
     width: 12rem
+    @media screen and (max-width: 480px)
+      height: 10rem
+      width: 8rem
+
 
 .card-box-background
   border-radius: 6px
