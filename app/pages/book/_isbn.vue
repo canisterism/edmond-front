@@ -6,7 +6,7 @@
         <div class="font-xlarge">{{ book.title }}</div>
         <div class="font-small">{{ book.author }}</div>
         <div class="cover">
-          <img :src="book.cover" alt>
+          <img :src="book.cover ? book.cover : noImage" alt>
         </div>
         <div v-if="showBetafunctions">
           <div class="status">
@@ -34,6 +34,8 @@
 </template>
 
 <script>
+import noImage from '~/assets/images/no_image.jpg'
+
 export default {
   asyncData({ store, params }) {
     if (store.state.books.books.length !== 0) {
@@ -58,7 +60,8 @@ export default {
   },
   data() {
     return {
-      showBetafunctions: false
+      showBetafunctions: false,
+      noImage: noImage
     }
   },
   methods: {

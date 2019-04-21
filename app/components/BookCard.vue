@@ -2,7 +2,7 @@
   <nuxt-link :to="'/book/' + isbn" class="card-box">
     <div class="card-box-background">
       <figure class="cover-area">
-        <img :src="cover" alt>
+        <img :src="cover ? cover : noImage" alt>
       </figure>
       <div class="media-content">
         <div class="content">
@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import noImage from '~/assets/images/no_image.jpg'
 export default {
   props: {
     author: String,
@@ -22,6 +23,11 @@ export default {
     publisher: String,
     isbn: Number,
     title: String
+  },
+  data() {
+    return {
+      noImage: noImage
+    }
   }
 }
 </script>
@@ -33,7 +39,8 @@ export default {
   text-align: center
   margin: 0.6rem auto
   > img
-      height: 16rem
+    height: 15rem
+    width: 12rem
 
 .card-box-background
   border-radius: 6px

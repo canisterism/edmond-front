@@ -1,4 +1,3 @@
-// eslint-disable-next-line
 import bookByText from '~/apollo/queries/bookByText'
 import bookByIsbn from '~/apollo/queries/bookByIsbn'
 
