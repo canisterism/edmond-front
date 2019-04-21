@@ -35,7 +35,8 @@ module.exports = {
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Archivo+Black'
+        href:
+          'https://fonts.googleapis.com/css?family=Archivo+Black|Noto+Sans+JP'
       }
     ]
   },

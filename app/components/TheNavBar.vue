@@ -67,7 +67,7 @@ export default {
 
 .brand-logo
   line-height: 1.9 //fixme: vertical-align doesn't work
-  font-family: 'Futura'
+  font-family: 'Futura','Archivo Black'
   font-weight: bold
   color: $base-color
 

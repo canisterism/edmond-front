@@ -71,7 +71,7 @@ export default {
 
 .logo
   font-size: 5vw
-  font-family: Futura
+  font-family: 'Futura','Archivo Black'
   color: $second-base-color
   > span
     color: $base-color
@@ -90,7 +90,7 @@ export default {
   text-align: center
 
   &.try
-    font-family: 'Archivo Black'
+    font-family: 'Futura','Archivo Black'
     display: inline-block
     background: yellow
     border-radius: 30px
@@ -122,7 +122,7 @@ export default {
 
 .card
   margin-left: 1rem
-  font-family: Hiragino Sans CNS
+  font-family: 'Noto Sans JP', sans-serif
 
 .cover > img
   width: auto
