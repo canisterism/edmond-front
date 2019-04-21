@@ -2,14 +2,17 @@
   <div class="main-container">
     <the-nav-bar></the-nav-bar>
     <nuxt class="content"/>
+    <the-footer></the-footer>
   </div>
 </template>
 <script>
 import TheNavBar from '~/components/TheNavBar.vue'
+import TheFooter from '~/components/TheFooter.vue'
 
 export default {
   components: {
-    TheNavBar
+    TheNavBar,
+    TheFooter
   }
 }
 </script>
@@ -23,5 +26,6 @@ export default {
 
 .content
   margin: 1rem 2rem
+  min-height: 80vh
 
 </style>
