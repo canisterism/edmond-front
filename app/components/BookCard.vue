@@ -1,17 +1,16 @@
 <template>
-  <nuxt-link :to="'/book/' + isbn" class="card-box">
-    <div class="card-box-background">
-      <figure class="cover-area">
-        <img :src="cover ? cover : noImage" alt>
-      </figure>
-      <div class="media-content">
-        <div class="content">
-          <div class>{{title}}</div>
-          <div class="author font-small">{{author}}</div>
-        </div>
+  <div class="card-box-background">
+    <nuxt-link :to="'/book/' + isbn" class="cover-area">
+      <img :src="cover ? cover : noImage" alt>
+    </nuxt-link>
+
+    <div class="media-content">
+      <div class="content">
+        <div class>{{title}}</div>
+        <div class="author font-small">{{author}}</div>
       </div>
     </div>
-  </nuxt-link>
+  </div>
 </template>
 
 <script>
@@ -38,6 +37,7 @@ export default {
 .cover-area
   text-align: center
   margin: 0.6rem auto
+  display: block
   > img
     height: 15rem
     width: 12rem
