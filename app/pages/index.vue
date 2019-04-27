@@ -26,7 +26,7 @@ export default {
 
 <style scoped lang="sass">
 .line
-  border: 0.5px $second-base-color solid
+  border: 0.5px $line-color solid
   width: 100%
 
 .number-of-search-hit

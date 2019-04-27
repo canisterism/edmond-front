@@ -14,7 +14,7 @@ html {
   -webkit-text-size-adjust: 100%; /* iOS 8+ */
   letter-spacing: 0.1rem;
   font-family: 'Noto Sans JP', sans-serif;
-  color: white;
+  color: #666666;
   word-break: break-all;
 }
 
@@ -236,10 +236,18 @@ select,
 textarea {
   border-style: none;
   background: white;
-  color: #2c416f;
+  color: #666666;
   outline: none;
   letter-spacing: 0.1rem;
-  padding-left: 1rem;
+}
+
+/* Style original style for button */
+button {
+  display: block;
+  margin: 0.5rem auto;
+  color: #666666;
+  border: none;
+  text-align: center;
 }
 
 /* Style select like a standard input */
