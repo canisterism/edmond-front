@@ -13,8 +13,9 @@ html {
   overflow-y: scroll; /* All browsers without overlaying scrollbars */
   -webkit-text-size-adjust: 100%; /* iOS 8+ */
   letter-spacing: 0.1rem;
-  font-family: 'Futura', Hiragino Sans CNS;
+  font-family: 'Noto Sans JP', sans-serif;
   color: white;
+  word-break: break-all;
 }
 
 *,

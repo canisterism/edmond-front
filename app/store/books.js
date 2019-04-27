@@ -1,4 +1,3 @@
-// eslint-disable-next-line
 import bookByText from '~/apollo/queries/bookByText'
 import bookByIsbn from '~/apollo/queries/bookByIsbn'
 
@@ -11,6 +10,7 @@ export const state = () => ({
 
 export const getters = {
   books: state => state.books,
+  book: state => state.book,
   searchWord: state => state.searchWord,
   bookByIsbn: state => isbn => {
     return state.books.find(book => {
@@ -44,12 +44,12 @@ export const actions = {
       })
     await commit('setSearchWord', { searchWord })
   },
-  async searchByIsbn({ commit, state }, { isbn }) {
+  async searchByIsbn({ commit }, { isbn }) {
     const client = this.app.apolloProvider.defaultClient
     await client
       .query({ query: bookByIsbn, variables: { isbn: isbn } })
       .then(({ data }) => {
-        commit('setBook', { books: data.book_by_isbn })
+        commit('setBook', { book: data.book_by_isbn })
       })
     await commit('setIsbn', { isbn })
   }

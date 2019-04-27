@@ -7,7 +7,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: pkg.name,
+    title: 'Edmond',
     meta: [
       { charset: 'utf-8' },
       {
@@ -35,7 +35,8 @@ module.exports = {
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Archivo+Black'
+        href:
+          'https://fonts.googleapis.com/css?family=Archivo+Black|Noto+Sans+JP'
       }
     ]
   },
@@ -52,10 +53,10 @@ module.exports = {
    */
   css: [
     {
-      src: '@/assets/ress.css'
+      src: '@/assets/stylesheets/base/ress.css'
     },
     {
-      src: '@/assets/main.scss'
+      src: '@/assets/stylesheets/main.sass'
     }
   ],
   /*
@@ -70,7 +71,8 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/apollo'
+    '@nuxtjs/apollo',
+    '@nuxtjs/style-resources'
   ],
   /*
    ** Apollo module configuration
@@ -84,6 +86,14 @@ module.exports = {
           'http://192.168.100.28:8888/graphql'
       }
     }
+  },
+  /*
+  ** style-resources module configuration
+    ** This module makes css(sass) variables global.
+    ** ref: https://github.com/nuxt-community/style-resources-module
+  */
+  styleResources: {
+    sass: './assets/stylesheets/base/_variables.sass'
   },
   /*
    ** Build configuration
