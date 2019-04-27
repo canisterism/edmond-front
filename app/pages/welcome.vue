@@ -16,8 +16,6 @@
         <li>@someone</li>
       </ul>
     </div>
-    <!-- fixme: 画質が終わっている -->
-    <!-- fixme: コンポーネントで賄った方が良い -->
     <div class="right">
       <div class="cards">
         <div class="card">
@@ -58,7 +56,7 @@ export default {
 
 <style lang="sass" scoped>
 .container
-  background: linear-gradient(90deg, #fff 20%, $base-color 20%)
+  background: linear-gradient(90deg, $primary-color 20%, $base-color 20%)
   height: 100vh
   display: flex
 
@@ -72,7 +70,7 @@ export default {
 .logo
   font-size: 5vw
   font-family: 'Futura','Archivo Black'
-  color: $second-base-color
+  color: $primary-color
   > span
     color: $base-color
 
@@ -92,10 +90,10 @@ export default {
   &.try
     font-family: 'Futura','Archivo Black'
     display: inline-block
-    background: yellow
+    background: $base-color
+    color: $primary-color
     border-radius: 30px
     box-shadow: 10px 5px 5px rgba(20, 20, 10, 0.1), 0 0 0 1px rgba(20, 10, 10, 0.1)
-    color: $base-color
     font-weight: bold
     height: 3.5rem
     min-width: 80%
