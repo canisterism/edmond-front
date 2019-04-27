@@ -2,9 +2,9 @@
   <section class>
     <div class>
       <div class="book-info">
-        <div class="font-small">{{ book.publisher }}</div>
+        <!-- <div class="font-small">{{ book.publisher }}</div>
         <div class="font-xlarge">{{ book.title }}</div>
-        <div class="font-small">{{ book.author }}</div>
+        <div class="font-small">{{ book.author }}</div>-->
         <div class="cover">
           <img :src="book.cover ? book.cover : noImage" alt>
         </div>
@@ -37,24 +37,17 @@
 import noImage from '~/assets/images/no_image.jpg'
 
 export default {
-  asyncData({ store, params }) {
+  async asyncData({ store, params }) {
     if (store.state.books.books.length !== 0) {
       return {
         book: store.getters['books/bookByIsbn'](parseInt(params.isbn))
       }
     } else {
-      // fixme: bookByIsbn実装されたらコメントアウト解除
-      // await store.dispatch('books/searchByIsbn', { isbn: params.isbn })
-      // const book = store.state.book
-      // return book
-      const book = {
-        cover: 'hoge',
-        author: 'API実装待ち',
-        publisher: 'API実装待ち',
-        title: 'API実装待ち'
-      }
+      await store.dispatch('books/searchByIsbn', {
+        isbn: parseInt(params.isbn)
+      })
       return {
-        book: book
+        book: store.state.books.book
       }
     }
   },
