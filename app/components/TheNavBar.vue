@@ -3,7 +3,7 @@
     <!-- ヘッダー -->
     <nav class="header-nav">
       <div class="brand-logo-area">
-        <nuxt-link to="/" class="brand-logo font-xxlarge">Edmond</nuxt-link>
+        <nuxt-link to="/" class="brand-logo font-xxlarge">Edmond*</nuxt-link>
       </div>
       <div class="search-area">
         <div class="input-area">
