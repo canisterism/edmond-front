@@ -2,9 +2,9 @@
   <section class>
     <div class>
       <div class="book-info">
-        <!-- <div class="font-small">{{ book.publisher }}</div>
+        <div class="font-small">{{ book.publisher }}</div>
         <div class="font-xlarge">{{ book.title }}</div>
-        <div class="font-small">{{ book.author }}</div>-->
+        <div class="font-small">{{ book.author }}</div>
         <div class="cover">
           <img :src="book.cover ? book.cover : noImage" alt>
         </div>
@@ -12,7 +12,7 @@
           <div class="status">
             <i class="fas fa-check"></i>貸出可
           </div>
-          <div class="button borrow font-small" @click="onClickBorrow()">借りる(未実装です)</div>
+          <button class="button borrow" @click="onClickBorrow()">借りる(未実装です)</button>
           <div class="borrowing-info">
             <h4>借りている人</h4>
             <ul class="borrowing-users font-small">
@@ -85,7 +85,7 @@ export default {
   background: $success-color
   text-align: center
   display: block
-  color: $second-base-color
+  color: $base-color
   border: none
   border-radius: 5px
   > i
@@ -94,47 +94,33 @@ export default {
     margin-right: 0.5rem
 
 .button
-  display: block
-  margin: 0.5rem auto
-  color: $second-base-color
-  border: none
-  text-align: center
-
   &.borrow
     display: inline-block
-    background: $second-base-color
-    border: $skyblue 1px solid
+    background: $primary-color
     border-radius: 5px
     box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1)
-    color: $skyblue
+    color: $base-color
     font-weight: bold
     height: 2.5rem
     margin: 1rem 0
     line-height: 2
     min-width: 15rem
     max-width: 20rem
-    &:hover
-      color: $second-base-color
-      background: $skyblue
-      transition: all 0.1s ease 0s
-
 
 .borrowing-info
   > h4
     font-weight: bold
     padding-bottom: 0.2rem
-    border-bottom: 2px $second-base-color solid
-
+    border-bottom: 1px $line-color solid
 
 .borrowing-user
   text-align: center
   width: 10rem
   margin: 1rem 8rem 1rem 0
   text-decoration: none
-  background: #273d6c
   border-radius: 2px
   color: $second-base-color
-  box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1)
+  box-shadow: 1px 3px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1)
   cursor: pointer
   &:hover
     border: solid 1px $second-base-color

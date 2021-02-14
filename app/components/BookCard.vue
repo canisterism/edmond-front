@@ -49,7 +49,6 @@ export default {
 .card-box-background
   border-radius: 6px
   padding: 1rem
-  background: linear-gradient( rgba(39, 60, 108, 0.8), rgba(139, 175, 255, 0.3), rgba(39, 60, 108, 0.8) )
   box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1)
   height: 100%
 

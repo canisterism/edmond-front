@@ -23,7 +23,7 @@ export default {
   padding: 1rem
 
 .line
-  border: 0.5px $second-base-color solid
+  border: 0.5px $line-color solid
 
 .copyright
   margin-top: 1rem
